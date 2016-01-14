@@ -29,17 +29,21 @@
       <div class="inner clearfix">
         <section id="main-content">
           <h2>
-<a id="inverse-macros-plugin" class="anchor" href="#inverse-macros-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inverse macros plugin</h2>
+<a id="inverse-macros" class="anchor" href="#inverse-macros" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inverse macros</h2>
 
-<p><a href="https://github.com/hiroshi-cl/InverseMacros-plugin">https://github.com/hiroshi-cl/InverseMacros-plugin</a></p>
+<p><a href="https://github.com/hiroshi-cl/InverseMacros-plugin">https://github.com/hiroshi-cl/InverseMacros-plugin</a>
+<a href="https://github.com/hiroshi-cl/InverseMacros">https://github.com/hiroshi-cl/InverseMacros</a></p>
 
-<p>This plugin is provided for Scala 2.11.7 and 2.12.0-M3.
+<p>The inverse macro system is provided for Scala 2.11.7 and 2.12.0-M3.
+Noted that the inverse macro system requires an compiler plugin.
 If you use SBT, type as follows:</p>
 
 <pre><code>scalaVersion := "2.11.7"     // for Scala 2.11.7
 scalaVersion := "2.12.0-M3"  // for Scala 2.12.0-M3
 resolvers += "hiroshi-cl" at "https://hiroshi-cl.github.io/sbt-repos/",
 addCompilerPlugin("jp.ac.u_tokyo.i.ci.csg.hiroshi_yamaguchi" % "paradise" % "2.1.0")
+libraryDependencies += "jp.ac.u_tokyo.i.ci.csg.hiroshi_yamaguchi" % "inverse_macros" % "1.0-SNAPSHOT" // For inverse macro developers
+libraryDependencies += "jp.ac.u_tokyo.i.ci.csg.hiroshi_yamaguchi" % "inverse_macros_library" % "1.0-SNAPSHOT" // Sample macros
 </code></pre>
         </section>
 
